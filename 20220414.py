@@ -205,37 +205,61 @@
 # print(f"s4 값 : {s4} \t 주소 : {hex(id(s4))}")
 # # => immutable 객체는 거의 같은 값을 참조함
 
-#mutable
-print("=" * 50)
-print("mutable 객체 예제")
-print("=" * 50)
-print("1. list 값이 변경되면?")
-arr1 = ['a', 'b', 77]
-arr2 = ['a', 'b', 77]
-arr3 = ['a', 'b', 77]
-arr4 = ['a', 'b', 77]
-print(f"arr1 값 : {arr1} \t 주소 : {hex(id(arr1))}")
-print(f"arr2 값 : {arr2} \t 주소 : {hex(id(arr2))}")
-print(f"arr3 값 : {arr3} \t 주소 : {hex(id(arr3))}")
-print(f"arr4 값 : {arr4} \t 주소 : {hex(id(arr4))}")
-arr1.append(10)
-arr2.append(10)
-#처음 주소랑 같음(arr1 = arr1)
-print(f"arr1 값 : {arr1} \t 주소 : {hex(id(arr1))}")
-print(f"arr2 값 : {arr2} \t 주소 : {hex(id(arr2))}")
-print(f"arr3 값 : {arr3} \t 주소 : {hex(id(arr3))}")
-print(f"arr4 값 : {arr4} \t 주소 : {hex(id(arr4))}")
+# #mutable
+# print("=" * 50)
+# print("mutable 객체 예제")
+# print("=" * 50)
+# print("1. list 값이 변경되면?")
+# arr1 = ['a', 'b', 77]
+# arr2 = ['a', 'b', 77]
+# arr3 = ['a', 'b', 77]
+# arr4 = ['a', 'b', 77]
+# print(f"arr1 값 : {arr1} \t 주소 : {hex(id(arr1))}")
+# print(f"arr2 값 : {arr2} \t 주소 : {hex(id(arr2))}")
+# print(f"arr3 값 : {arr3} \t 주소 : {hex(id(arr3))}")
+# print(f"arr4 값 : {arr4} \t 주소 : {hex(id(arr4))}")
+# arr1.append(10)
+# arr2.append(10)
+# #처음 주소랑 같음(arr1 = arr1)
+# print(f"arr1 값 : {arr1} \t 주소 : {hex(id(arr1))}")
+# print(f"arr2 값 : {arr2} \t 주소 : {hex(id(arr2))}")
+# print(f"arr3 값 : {arr3} \t 주소 : {hex(id(arr3))}")
+# print(f"arr4 값 : {arr4} \t 주소 : {hex(id(arr4))}")
 
-print("\n2. dictionary 값이 변경되면?")
-d1 = {'a' : 11, 'b' : 22, 'c' : 33}
-d2 = {'a' : 11, 'b' : 22, 'c' : 33}
-d3 = {'a' : 11, 'b' : 22, 'c' : 33}
-print(f"d1 값 : {d1} \t 주소 : {hex(id(d1))}")
-print(f"d2 값 : {d2} \t 주소 : {hex(id(d2))}")
-print(f"d3 값 : {d3} \t 주소 : {hex(id(d3))}")
-d1['a'] = 99
-d2['d'] = 44
-# 처음 주소랑 같음(d1 = d1)
-print(f"d1 값 : {d1} \t 주소 : {hex(id(d1))}")
-print(f"d2 값 : {d2} \t 주소 : {hex(id(d2))}")
-print(f"d3 값 : {d3} \t 주소 : {hex(id(d3))}")
+# print("\n2. dictionary 값이 변경되면?")
+# d1 = {'a' : 11, 'b' : 22, 'c' : 33}
+# d2 = {'a' : 11, 'b' : 22, 'c' : 33}
+# d3 = {'a' : 11, 'b' : 22, 'c' : 33}
+# print(f"d1 값 : {d1} \t 주소 : {hex(id(d1))}")
+# print(f"d2 값 : {d2} \t 주소 : {hex(id(d2))}")
+# print(f"d3 값 : {d3} \t 주소 : {hex(id(d3))}")
+# d1['a'] = 99
+# d2['d'] = 44
+# # 처음 주소랑 같음(d1 = d1)
+# print(f"d1 값 : {d1} \t 주소 : {hex(id(d1))}")
+# print(f"d2 값 : {d2} \t 주소 : {hex(id(d2))}")
+# print(f"d3 값 : {d3} \t 주소 : {hex(id(d3))}")
+
+# ***과제***
+#1.
+student_grade = 2
+student_class = 3
+student_number = 12
+student_name = "최혜민"
+student_height = 171.7
+print(f"{student_grade}학년 {student_class}반 {student_number}번")
+print(f"이름 : {student_name}")
+print(f"키 : {student_height}cm")
+#2.
+print(type(student_grade))
+print(type(student_class))
+print(type(student_number))
+print(type(student_name))
+print(type(student_height))
+#3.
+our_team = ["김비야", "김유진", "박선주", "백선미", "안소영", "양혜원", "이혜령", "임재연", "최윤영", "최혜민", "하도연", "하진"]
+print(our_team)
+#4
+print(our_team[9])
+#5
+print(our_team[5:9])
