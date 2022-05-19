@@ -1,5 +1,5 @@
 # # 얕은 복사 => copy 메서드 사용
-# 배열명.copy : 주소 다름, 내부 주소 동일
+# # 배열명.copy : 주소 다름, 내부 주소 동일
 # arr1 = [4, 5, 6, [2, 4, 8]]
 # arr2 = arr1.copy() # 여기서 복사 copy 메서드 사용
 # print("1. 전체 출력")
@@ -71,29 +71,29 @@
 # print(f"d1 : {d1}, address : {hex(id(d1))}")
 # print(f"d2 : {d2}, address : {hex(id(d2))}")
 
-# # 깊은 복사 : 값만 복사, 객체 공유X
-# import copy # copy 모듈 불러오기
-# arr1 = [1, 2, [99, 88, 77], 3]
-# arr2 = copy.deepcopy(arr1) # copy 모듈 깊은 복사
-# print("1. 전체 출력")
-# print(f"arr1 : {arr1}, address : {hex(id(arr1))}")
-# print(f"arr2 : {arr2}, address : {hex(id(arr2))}")
-# print("\n2. 리스트에 새 key, value 추가")
-# arr1.append(0)
-# print('arr1.append(0)')
-# print(f"arr1 : {arr1}, address : {hex(id(arr1))}")
-# print(f"arr2 : {arr2}, address : {hex(id(arr2))}")
-# # 리스트 내부에 리스트 추가
-# print("\n3. 리스트 내부 리스트")
-# print(f"arr1[2] : {arr1[2]}, address : {hex(id(arr1[2]))}")
-# print(f"arr2[2] : {arr2[2]}, address : {hex(id(arr2[2]))}") # 내부 리스트도 둘의 주소가 다르다(깊은 복사이기 때문에)
-# print("\n4. 리스트 내부 리스트에 값 추가")
-# arr1[2].append(10)
-# print(f"arr1[2] : {arr1[2]}, address : {hex(id(arr1[2]))}")
-# print(f"arr2[2] : {arr2[2]}, address : {hex(id(arr2[2]))}") # 위랑 주소 다름
-# print("\n5. 리스트 전체 다시 확인")
-# print(f"arr1 : {arr1}, 주소 : {hex(id(arr1))}")
-# print(f"arr2 : {arr2}, 주소 : {hex(id(arr2))}")
+# 깊은 복사 : 값만 복사, 객체 공유X
+import copy # copy 모듈 불러오기
+arr1 = [1, 2, [99, 88, 77], 3]
+arr2 = copy.deepcopy(arr1) # copy 모듈 깊은 복사
+print("1. 전체 출력")
+print(f"arr1 : {arr1}, address : {hex(id(arr1))}")
+print(f"arr2 : {arr2}, address : {hex(id(arr2))}")
+print("\n2. 리스트에 새 key, value 추가")
+arr1.append(0)
+print('arr1.append(0)')
+print(f"arr1 : {arr1}, address : {hex(id(arr1))}")
+print(f"arr2 : {arr2}, address : {hex(id(arr2))}")
+# 리스트 내부에 리스트 추가
+print("\n3. 리스트 내부 리스트")
+print(f"arr1[2] : {arr1[2]}, address : {hex(id(arr1[2]))}")
+print(f"arr2[2] : {arr2[2]}, address : {hex(id(arr2[2]))}") # 내부 리스트도 둘의 주소가 다르다(깊은 복사이기 때문에)
+print("\n4. 리스트 내부 리스트에 값 추가")
+arr1[2].append(10)
+print(f"arr1[2] : {arr1[2]}, address : {hex(id(arr1[2]))}")
+print(f"arr2[2] : {arr2[2]}, address : {hex(id(arr2[2]))}") # 위랑 주소 다름
+print("\n5. 리스트 전체 다시 확인")
+print(f"arr1 : {arr1}, 주소 : {hex(id(arr1))}")
+print(f"arr2 : {arr2}, 주소 : {hex(id(arr2))}")
 
 # id = "881120-1068234"
 # print("연월일 : ", id[0:6])
@@ -113,8 +113,8 @@
 # t += (4, )
 # print(t)
 
-a = {'A' : 90, 'B' : 80, 'C': 70}
-b = a.pop('B')
-print("원본 딕셔너리 : ", a)
-print("'B' 추출 후 딕셔너리 : ", a)
-print("추출된 B의 값 : ", b)
+# a = {'A' : 90, 'B' : 80, 'C': 70}
+# b = a.pop('B')
+# print("원본 딕셔너리 : ", a)
+# print("'B' 추출 후 딕셔너리 : ", a)
+# print("추출된 B의 값 : ", b)
