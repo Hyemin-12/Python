@@ -64,19 +64,19 @@
 # print(d)
 # print(type(d))
 
-# colors = {"apple" : "red", "banana" : "yelllow"}
-# print(colors)
+colors = {"apple": "red", "banana": "yelllow"}
+print(colors)
 
-# # 딕셔너리에 키, 값 추가할 때
-# colors["cherry"] = "red" # 딕셔너리이름[키] = 값 
-# print(colors)
+# 딕셔너리에 키, 값 추가할 때
+colors["cherry"] = "red"  # 딕셔너리이름[키] = 값
+print(colors)
 
-# # 포문으로 딕셔너리 안의 값을 하나씩 출력가능
-# for item in colors.items(): # 튜플 형태로 출력됨
-#     print(item)
+# 포문으로 딕셔너리 안의 값을 하나씩 출력가능
+for item in colors.items():  # 튜플 형태로 출력됨
+    print(item)
 
-# for k, v in colors.items(): # 그냥...하나씩 출력됨
-#     print(k, v)
+for k, v in colors.items():  # 그냥...하나씩 출력됨
+    print(k, v)
 
 # print(colors)
 # del colors["cherry"] # 삭제
@@ -97,7 +97,7 @@
 # print("park" in phone) # phone 안에서 park의 존재 여부
 # print("moon" in phone)
 # p = phone
-# print(p) 
+# print(p)
 
 # d = {"a" : 100, "b" : 200, "c" : 300}
 
@@ -146,7 +146,7 @@
 # d = 99
 # e = 99
 # # 하나의 값(99)에 대한 주소가 다 똑같음
-# # 하나의 immutable 값에 여러 개의 참조가 붙게 됨 
+# # 하나의 immutable 값에 여러 개의 참조가 붙게 됨
 # print(hex(id(a)))
 # print(hex(id(b)))
 # print(hex(id(c)))
@@ -240,26 +240,26 @@
 # print(f"d2 값 : {d2} \t 주소 : {hex(id(d2))}")
 # print(f"d3 값 : {d3} \t 주소 : {hex(id(d3))}")
 
-# ***과제***
-#1.
-student_grade = 2
-student_class = 3
-student_number = 12
-student_name = "최혜민"
-student_height = 171.7
-print(f"{student_grade}학년 {student_class}반 {student_number}번")
-print(f"이름 : {student_name}")
-print(f"키 : {student_height}cm")
-#2.
-print(type(student_grade))
-print(type(student_class))
-print(type(student_number))
-print(type(student_name))
-print(type(student_height))
-#3.
-our_team = ["김비야", "김유진", "박선주", "백선미", "안소영", "양혜원", "이혜령", "임재연", "최윤영", "최혜민", "하도연", "하진"]
-print(our_team)
-#4
-print(our_team[9])
-#5
-print(our_team[5:9])
+# # ***과제***
+# #1.
+# student_grade = 2
+# student_class = 3
+# student_number = 12
+# student_name = "최혜민"
+# student_height = 171.7
+# print(f"{student_grade}학년 {student_class}반 {student_number}번")
+# print(f"이름 : {student_name}")
+# print(f"키 : {student_height}cm")
+# #2.
+# print(type(student_grade))
+# print(type(student_class))
+# print(type(student_number))
+# print(type(student_name))
+# print(type(student_height))
+# #3.
+# our_team = ["김비야", "김유진", "박선주", "백선미", "안소영", "양혜원", "이혜령", "임재연", "최윤영", "최혜민", "하도연", "하진"]
+# print(our_team)
+# #4
+# print(our_team[9])
+# #5
+# print(our_team[5:9])
