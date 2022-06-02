@@ -2,39 +2,36 @@
 # 1.
 a = int(input("정수1 입력 : "))
 b = int(input("정수2 입력 : "))
-
 print("")
-if a < b:
-    for i in range(a, b+1):
-        print("{}단".format(i))
-        for j in range(1, 9+1):
-            print("{} * {} = {}".format(i, j, i*j))
-        print("")
-else:
-    for i in range(b, a+1):
-        print("{}단".format(i))
-        for j in range(1, 9+1):
-            print("{} * {} = {}".format(i, j, i*j))
-        print("")
 
-# 2.
-num1 = int(input("점수1 입력 : "))
-num2 = int(input("점수2 입력 : "))
-num3 = int(input("점수3 입력 : "))
-num4 = int(input("점수4 입력 : "))
-num5 = int(input("점수5 입력 : "))
+if a > b:
+    a, b = b, a
+for i in range(a, b+1):
+    print("{}단".format(i))
+    for j in range(1, 9+1):
+        print("{0} * {1} = {2}".format(i, j, i*j))
+    print("")
 
-print(f"입력된 점수 : {num1} {num2} {num3} {num4} {num5}")
+2.
+li = []
+sum = 0
+for i in range(0, 5):
+    li.append(int(input(f"점수{i+1} 입력 : ")))
 
-sum = num1 + num2 + num3 + num4 + num5
+print("입력된 점수 : ", end = ' ')
 
-print(f"합계 : {sum}")
+for i in range(0, 5):
+    print(li[i], end = ' ')
+    sum += li[i]
+
+print(f"\n합계 : {sum}")
 print("평균: {0:0.2f}".format(sum / 5))
 
 if (sum / 5) >= 60:
-    print("{0:0.2f}점으로 합격입니다.".format(sum / 5))
+    s = "합격"
 else:
-    print("{0:0.2f}점으로 불합격입니다.".format(sum / 5))
+    s = "불합격"
+print("{0:0.2f}점으로 {1}입니다.\n".format(sum / 5, s))
 
 # 3.
 d = {"메로나": [1000, 20], "비비빅": [700, 3], "바밤바": [850, 100]}
@@ -64,7 +61,7 @@ while(1):
 
         print("  상품명\t가격\t  수량")
         for key in d.keys():
-            print("{}\t\t{}\t  {}".format(key, d[key][0], d[key][1]))
+            print("{0:<9}{1:>9}{2:>9}".format(key, d[key][0], d[key][1]))
         print("")
     elif selectNum == 2:
         # 3-3
@@ -84,7 +81,7 @@ while(1):
 
                 print("  상품명\t가격\t  수량")
                 for key in d.keys():
-                    print("{}\t\t{}\t  {}".format(key, d[key][0], d[key][1]))
+                    print("{0:<9}{1:>9}{2:>9}".format(key, d[key][0], d[key][1]))
                 print("")
             elif n == 2:
                 changeCount = int(input("수량 입력 : "))
@@ -93,7 +90,7 @@ while(1):
 
                 print("  상품명\t가격\t  수량")
                 for key in d.keys():
-                    print("{}\t\t{}\t  {}".format(key, d[key][0], d[key][1]))
+                    print("{0:<9}{1:>9}{2:>9}".format(key, d[key][0], d[key][1]))
                 print("")
             else:
                 print('입력 오류')
@@ -108,14 +105,14 @@ while(1):
 
         print("  상품명\t가격\t  수량")
         for key in d.keys():
-            print("{}\t\t{}\t  {}".format(key, d[key][0], d[key][1]))
+            print("{0:<9}{1:>9}{2:>9}".format(key, d[key][0], d[key][1]))
         print("")
     elif selectNum == 4:
         # 3-1
         print("4. 상품 조회")
         print("  상품명\t가격\t  수량")
         for key in d.keys():
-            print("{}\t\t{}\t  {}".format(key, d[key][0], d[key][1]))
+            print("{0:<9}{1:>9}{2:>9}".format(key, d[key][0], d[key][1]))
         print("")
     else:
         print("입력 오류")
