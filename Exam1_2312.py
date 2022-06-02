@@ -18,7 +18,7 @@ sum = 0
 for i in range(0, 5):
     li.append(int(input(f"점수{i+1} 입력 : ")))
 
-print("입력된 점수 : ", end = ' ')
+print("입력된 점수 : ", end = '')
 
 for i in range(0, 5):
     print(li[i], end = ' ')
@@ -59,9 +59,9 @@ while(1):
 
         d[newName] = [newPrice, newCount]
 
-        print("  상품명\t가격\t  수량")
+        print("{0:>5}{1:>8}{2:>8}".format("상품명", "가격", "수량"))
         for key in d.keys():
-            print("{0:<9}{1:>9}{2:>9}".format(key, d[key][0], d[key][1]))
+            print("{0:<8}{1:>8}{2:>8}".format(key, d[key][0], d[key][1]))
         print("")
     elif selectNum == 2:
         # 3-3
@@ -79,40 +79,43 @@ while(1):
 
                 d[name][0] = changePrice
 
-                print("  상품명\t가격\t  수량")
+                print("{0:>5}{1:>8}{2:>8}".format("상품명", "가격", "수량"))
                 for key in d.keys():
-                    print("{0:<9}{1:>9}{2:>9}".format(key, d[key][0], d[key][1]))
+                    print("{0:<8}{1:>8}{2:>8}".format(key, d[key][0], d[key][1]))
                 print("")
             elif n == 2:
                 changeCount = int(input("수량 입력 : "))
 
                 d[name][1] = changeCount
 
-                print("  상품명\t가격\t  수량")
+                print("{0:>5}{1:>8}{2:>8}".format("상품명", "가격", "수량"))
                 for key in d.keys():
-                    print("{0:<9}{1:>9}{2:>9}".format(key, d[key][0], d[key][1]))
+                    print("{0:<8}{1:>8}{2:>8}".format(key, d[key][0], d[key][1]))
                 print("")
             else:
-                print('입력 오류')
+                print('입력 오류\n')
         else:
-            print("상품이 없습니다.")
+            print("상품이 없습니다.\n")
     elif selectNum == 3:
         # 3-4
         print("3. 상품 삭제")
         deleteName = input("상품명 입력 : ")
 
-        del d[deleteName]
+        if deleteName in d:
+            del d[deleteName]
+        else:
+            print("상품이 존재하지 않습니다.\n")
 
-        print("  상품명\t가격\t  수량")
+        print("{0:>5}{1:>8}{2:>8}".format("상품명", "가격", "수량"))
         for key in d.keys():
-            print("{0:<9}{1:>9}{2:>9}".format(key, d[key][0], d[key][1]))
+            print("{0:<8}{1:>8}{2:>8}".format(key, d[key][0], d[key][1]))
         print("")
     elif selectNum == 4:
         # 3-1
         print("4. 상품 조회")
-        print("  상품명\t가격\t  수량")
+        print("{0:>5}{1:>8}{2:>8}".format("상품명", "가격", "수량"))
         for key in d.keys():
-            print("{0:<9}{1:>9}{2:>9}".format(key, d[key][0], d[key][1]))
+            print("{0:<8}{1:>8}{2:>8}".format(key, d[key][0], d[key][1]))
         print("")
     else:
-        print("입력 오류")
+        print("입력 오류\n")
