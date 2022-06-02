@@ -90,7 +90,7 @@
 # if 'money' in pocket or 'card' in pocket:
 #     print("택시를 타라")
 # else:
-#     print("걸어 가라")
+#     print("걸어 가라")    
 
 saying = "Life is too short, you need python"
 
