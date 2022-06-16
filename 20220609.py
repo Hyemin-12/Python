@@ -134,14 +134,14 @@
 # for item in iteL:
 #     print("item:{0}".format(item))
 
-# #입력받은 양의 정수가 3, 5, 8의 배수인지 알려주는 프로그램
-# n = int(input("수 입력 : "))
+#입력받은 양의 정수가 3, 5, 8의 배수인지 알려주는 프로그램(공배수 제외)
+n = int(input("수 입력 : "))
 
-# if n % 3 == 0:
-#     print("{}은(는) 3의 배수이다.".format(n))
-# elif n % 5 == 0:
-#     print("{}은(는) 5의 배수이다.".format(n))
-# elif n % 8 == 0:
-#     print("{}은(는) 8의 배수이다.".format(n))
-# else:
-#     print("{}은(는) 어느 배수도 아니다.".format(n))
+if n % 3 == 0:
+    print("{}은(는) 3의 배수이다.".format(n))
+elif n % 5 == 0:
+    print("{}은(는) 5의 배수이다.".format(n))
+elif n % 8 == 0:
+    print("{}은(는) 8의 배수이다.".format(n))
+else:
+    print("{}은(는) 어느 배수도 아니다.".format(n))
