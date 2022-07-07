@@ -1,5 +1,5 @@
 # # 매개변수 1개
-# import random
+# import random # random 모듈 import
 # #인자 값 = 주사위 눈 수 조정, pip: 주사위의 눈을 의미
 # def rolling_dice(pip):
 #     n = random.randint(1, pip)
@@ -65,4 +65,4 @@
 # # 셋 다 오류
 # fn(c=3, b=2, a=1, 4, 5)
 # fn(1, 2, c=3 4, 5)
-# fn(4, 5, a=1, b=2, c=3)
+# fn(4, 5, a=1, b=2, c=3) 
