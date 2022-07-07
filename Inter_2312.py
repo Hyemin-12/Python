@@ -1,19 +1,14 @@
 # 2312 최혜민
 
 def intersect(str1, str2):
-    str1Lower = str(str1).lower()
-    str2Lower = str(str2).lower()
-
-    str1List = list(str1Lower)    
-    str2List = list(str1Lower)
 
     res = []
 
-    for i in range (0, len(str1)):
-        for j in range(0, len(str2)):
-            if(str1Lower[i] == str2Lower[j]):
-                if(not(str1Lower[i] in res)):
-                    res.append(str1[i])
+    for ch1 in str1:
+        for ch2 in str2:
+            if(ch1 == ch2):
+                if ch1 not in res:
+                    res.append(ch1)
 
     return res
                 
