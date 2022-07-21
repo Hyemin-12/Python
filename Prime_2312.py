@@ -4,19 +4,15 @@ print("1 ~ N 까지의 소수와 그 갯수를 구하는 프로그램")
 
 def isPrimeNumber(num):
     cnt = 0
-    li = []
-
-    for i in range(2, num+1):
-        li.append(i)
 
     print("소수 : ", end='') 
-    for n in li:
-        for i in range(2, n+1):
-            if(n % i == 0):
-                if(n == i): 
-                    print(n, " ", end='')
+
+    for i in range(2, num+1):
+        for j in range(2, num+1):
+            if(i % j == 0):
+                if(i == j): 
+                    print(i, " ", end='')
                     cnt+=1
-                    break
                 else:
                     break
 
