@@ -4,15 +4,30 @@ import random
 
 
 def func_lotto():
-    li = []
-    for i in range(1, 6+1):
-        li.append(str(random.randint(1, 45)))
+    se = set()
+    cnt = 0
 
-    return li
+    while True:
+        se.add(random.randint(1, 45))
+        
+        if len(se) == cnt+1:
+            cnt+=1
+
+        if cnt == 6:
+            break
+        
+    return list(se)
 
 
 for i in range(1, 10+1):
     result = func_lotto()
-    result.sort
 
-    print("당첨번호 : ", " ".join(result))
+    result.sort()
+
+    print("당첨번호 : ", end='')
+
+    for num in result:
+        print(num, "", end='')
+        
+    print()
+

@@ -21,14 +21,10 @@ print("60점 대\t\t : ", "*"*cnt[3])
 print("60점 미만\t : ", "*"*cnt[4])
 
 # 최고, 최저점수 구하기
-max = 0
-min = li[0]
-
 for score in li:
-    if(int(score) > max):
-        max = int(score)
-    if(int(score) < int(min)):
-        min = int(score)
+    max_score = max(score)
+    min_score = min(score)
 
-print("최고점수 : ", max)
-print("최저점수 : ", min)
+
+print("최고점수 : ", max_score)
+print("최저점수 : ", min_score)
