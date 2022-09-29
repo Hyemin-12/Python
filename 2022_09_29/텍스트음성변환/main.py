@@ -8,7 +8,7 @@ file_path = 'Mydata.txt'
 with open(file_path, 'rt', encoding='UTF8') as f: # rt : 읽는 용도로 사용
     read_file = f.read()
 tts = gTTS(text=read_file, lang='ko')
-mp = "schoolsong.mp3"
+mp = "mp3\\schoolsong.mp3"
 tts.save(mp)
 
 # mp3파일을 파이썬으로 재생
